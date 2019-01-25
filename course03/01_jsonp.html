@@ -10,9 +10,26 @@
         <!-- http://127.0.0.1:5500/course03/01_jsonp.html       -->
     <button id="button">点我发ajax请求</button>
     <script type="text/javascript">
-        var xhr = new XMLHttpRequest();
-        xhr.open('get','http://localhost:8888/jsonp');
-        xhr.send();
+        // var xhr = new XMLHttpRequest();
+        // xhr.open('get','http://localhost:8888/jsonp');
+        // xhr.send();
+
+
+        // 实现jsonp
+        // 1.script 标签的创建及加载
+        var script = document.createElement('script');
+        
+        // 2.服务器返回的数据 需要在函数中被执行
+        // 3.挂载一个全局函数
+        var callbackName = 'callback_' + Date.now();  // callback_124564
+        // 挂载
+        window[callbackName] = function(data){
+            alert(data)
+        }
+        // 4.把这个函数名传递给服务器
+        script.src = 'http://localhost:8888/jsonp?callback=' + callbackName;
+        // 5.将标签插入到body中
+        document.body.append(script);
     </script>
 </body>
 </html>
