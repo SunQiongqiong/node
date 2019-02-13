@@ -1,0 +1,23 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "nodeJSѧϰ�ʼ�\r    course01   ��һ��   ���ö���\r    course02  �ڶ���    server\r    course03  ������    ����",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SunQiongqiong/node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SunQiongqiong/node/issues"
+  },
+  "homepage": "https://github.com/SunQiongqiong/node#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
