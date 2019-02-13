@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <!-- http://127.0.0.1:5500/course03/01_jsonp.html       -->
+    <button id="button">点我发ajax请求</button>
+    <script type="text/javascript">
+        // 点击事件
+        document.querySelector("#button").onclick = function(){
+            // 发请求
+            var xhr = new XMLHttpRequest();
+            xhr.open('post','http://localhost:8888/cors');
+            // 1: options 触发点1:非简单请求方式
+            // xhr.open('put','http://localhost:8888/cors');
+            
+            // 2:options触发点2： 加入自定义头
+            // xhr.setRequestHeader('my-token','abcd');
+
+            // 3:当content-type 是非键值对 application/json
+            xhr.setRequestHeader('content-type','application/json');
+
+            xhr.send('a = 1');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert(xhr.responseText);
+                }
+            }
+        }
+       
+        
+
+    </script>
+</body>
+</html>
