@@ -1,0 +1,4 @@
+npm init -y
+npm i express -S
+npm i art-template -S
+npm i express-art-template -S
