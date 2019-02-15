@@ -1,0 +1,8 @@
+ <html>
+ <body>
+
+ 
+    这是一个页面
+    {{text}}
+ </body>
+ </html>
